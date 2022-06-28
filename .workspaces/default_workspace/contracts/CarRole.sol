@@ -13,7 +13,7 @@ contract CarRole {
   Roles.Role private cars;
 
   modifier onlyCars() {
-    require(isCar(msg.sender));
+    require(isCar(msg.sender),"Only cars can call this.");
     _;
   }
 
@@ -21,22 +21,13 @@ contract CarRole {
     return cars.has(account);
   }
 
-  function addCar(address account) public {
-    _addCar(account);
-  }
-
-  function renounceCar() public {
-    _removeCar(msg.sender);
-  }
-
-  function _addCar(address account) internal {
+  function addCar(address account) internal {
     cars.add(account);
     emit CarAdded(account);
-    
   }
 
-  function _removeCar(address account) internal {
-    cars.remove(account);
-    emit CarRemoved(account);
+  function renounceCar() internal {
+    cars.remove(msg.sender);
+    emit CarRemoved(msg.sender);
   }
 }

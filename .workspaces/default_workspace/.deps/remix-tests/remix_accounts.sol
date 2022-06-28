@@ -4,7 +4,7 @@ pragma solidity >=0.4.22 <0.9.0;
 
 library TestsAccounts {
     function getAccount(uint index) pure public returns (address) {
-        address[15] memory accounts;
+        address[21] memory accounts;
 		accounts[0] = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
 
 		accounts[1] = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2;
@@ -34,6 +34,19 @@ library TestsAccounts {
 		accounts[13] = 0x583031D1113aD414F02576BD6afaBfb302140225;
 
 		accounts[14] = 0xdD870fA1b7C4700F2BD7f44238821C26f7392148;
+
+		accounts[15] = 0xFF2fDfDB2DD4F4dE4ff2Bf92175a8d414CDEC784;
+
+		accounts[16] = 0xf3C31b6513cceAf33b1cC9A0746C748989b4EacA;
+
+		accounts[17] = 0x6365BB83E45EC8C1047dC603eE2abBB7270Be68E;
+
+		accounts[18] = 0xbE8B465f380428eA532561dC03b161eD92b7A12B;
+
+		accounts[19] = 0x36112339d68cDE6e904fFFE7a6bD11d243dEbB60;
+
+		accounts[20] =0x31BE1DA436CC44a0E1C6DD00a81501EcfA61EC41;
+
 
         return accounts[index];
     }

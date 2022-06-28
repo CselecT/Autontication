@@ -13,7 +13,7 @@ contract CentralRole {
   Roles.Role private central;
 
   modifier onlyCentral() {
-    require(isCentral(msg.sender));
+    require(isCentral(msg.sender),"Only central authority can call this.");
     _;
   }
 
@@ -21,24 +21,17 @@ contract CentralRole {
     return central.has(account);
   }
 
-  function addCentral(address account) public {
-    _addCentral(account);
-  }
-
-  function renounceCentral() public {
-    _removeCentral(msg.sender);
-  }
-
-  function _addCentral(address account) internal {
+  function addCentral(address account) internal {
     if(central.any()==false){
       central.add(account);
       emit CentralAdded(account);
     }
-    
+
   }
 
-  function _removeCentral(address account) internal {
-    central.remove(account);
-    emit CentralRemoved(account);
+  function renounceCentral() internal {
+    central.remove(msg.sender);
+    emit CentralRemoved(msg.sender);
   }
+
 }

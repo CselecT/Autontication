@@ -3,12 +3,12 @@
     try {
         console.log('Running deployWithWeb3 script...')
         
-        const contractName = 'CarMessaging' // Change this for other contract
+        const contractName = 'TestsAccounts' // Change this for other contract
         const constructorArgs = []    // Put constructor args (if any) here for your contract
     
         // Note that the script needs the ABI which is generated from the compilation artifact.
         // Make sure contract is compiled and artifacts are generated
-        const artifactsPath = `browser/contracts/artifacts/${contractName}.json` // Change this for different path
+        const artifactsPath = `browser/.deps/remix-tests/artifacts/${contractName}.json` // Change this for different path
 
         const metadata = JSON.parse(await remix.call('fileManager', 'getFile', artifactsPath))
         const accounts = await web3.eth.getAccounts()
