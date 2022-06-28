@@ -1,0 +1,119 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "CarAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "CarRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "addCar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "isCar",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceCar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CarRole.sol": "CarRole"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CarRole.sol": {
+			"keccak256": "0x02448e5bc90190b25f12f2142f19549bcd79da5de0ca810f53499b33819b1fc1",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://cf51285842896cd0b0bdc2460a9422f627da01ec0a97a183f08245ccd9b2ca5b",
+				"dweb:/ipfs/QmTXpPJsEGD8CvZH8x2jU9JJko8R1WbHwgdgncU3HqP3d2"
+			]
+		},
+		"contracts/Roles.sol": {
+			"keccak256": "0x81585b20a862eaa4a2ea6f15de016d521b5092864fc6b8cad5eada02c865dfd0",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2dd009c3ce0d210f49c391b169c7022ac75b4351ea676e2a285e575f4d35d5c8",
+				"dweb:/ipfs/QmUtq1jLJocmeMwetgzXm3cDRtFZQXcJxGtgXXjukB6bXh"
+			]
+		}
+	},
+	"version": 1
+}
